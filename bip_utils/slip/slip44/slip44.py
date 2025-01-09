@@ -79,3 +79,4 @@ class Slip44:
     AVALANCHE: int = 9000
     CELO: int = 52752
     PI_NETWORK: int = 314159
+    TON: int = 607

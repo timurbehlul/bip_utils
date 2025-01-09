@@ -124,3 +124,4 @@ class Bip44Coins(BipCoins):
     ERGO_TESTNET = auto()
     LITECOIN_TESTNET = auto()
     ZCASH_TESTNET = auto()
+    TON = auto()

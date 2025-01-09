@@ -27,7 +27,7 @@ from bip_utils.addr import (
     EthAddrEncoder, FilSecp256k1AddrEncoder, IcxAddrEncoder, InjAddrEncoder, NanoAddrEncoder, NearAddrEncoder,
     NeoLegacyAddrEncoder, NeoN3AddrEncoder, NimAddrEncoder, OkexAddrEncoder, OneAddrEncoder, P2PKHAddrEncoder,
     SolAddrEncoder, SubstrateEd25519AddrEncoder, SuiAddrEncoder, TrxAddrEncoder, XlmAddrEncoder, XlmAddrTypes,
-    XmrAddrEncoder, XrpAddrEncoder, XtzAddrEncoder, XtzAddrPrefixes, ZilAddrEncoder
+    XmrAddrEncoder, XrpAddrEncoder, XtzAddrEncoder, XtzAddrPrefixes, ZilAddrEncoder, TONAddrEncoder
 )
 from bip_utils.bip.bip32 import (
     Bip32Const, Bip32KeyNetVersions, Bip32KholawEd25519, Bip32Slip10Ed25519, Bip32Slip10Ed25519Blake2b,
@@ -1351,6 +1351,18 @@ class Bip44Conf:
         wif_net_ver=None,
         bip32_cls=Bip32Slip10Secp256k1,
         addr_cls=ZilAddrEncoder,
+        addr_params={},
+    )
+     # Configuration for TON
+    TON: BipCoinConf = BipCoinConf(
+        coin_names=CoinsConf.TON.CoinNames(),
+        coin_idx=Slip44.TON,
+        is_testnet=False,
+        def_path=DER_PATH_HARDENED_SHORT,
+        key_net_ver=_BIP44_BTC_KEY_NET_VER_MAIN,
+        wif_net_ver=None,
+        bip32_cls=Bip32Slip10Ed25519,
+        addr_cls=TONAddrEncoder,
         addr_params={},
     )
 
