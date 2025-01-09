@@ -104,7 +104,7 @@ class TONAddrEncoder(IAddrEncoder):
         data = begin_cell()\
                         .store_uint(0, 32)\
                         .store_uint(wallet_id, 32)\
-                        .store_bytes(public_key)\
+                        .store_bytes(pub_key)\
                         .store_bit(0) \
                     .end_cell()
                             
