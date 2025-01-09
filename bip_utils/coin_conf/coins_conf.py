@@ -885,6 +885,12 @@ class CoinsConf:
         },
     )
 
+    TON: CoinConf = CoinConf(
+        coin_name=CoinNames("The Open Network", "TON"),
+        params={
+        },
+    )
+
 
 # For compatibility
 CoinsConf.Neo = CoinsConf.NeoLegacy
