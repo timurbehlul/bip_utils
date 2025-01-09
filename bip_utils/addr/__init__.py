@@ -54,4 +54,4 @@ from bip_utils.addr.xmr_addr import (
 from bip_utils.addr.xrp_addr import XrpAddr, XrpAddrDecoder, XrpAddrEncoder
 from bip_utils.addr.xtz_addr import XtzAddr, XtzAddrDecoder, XtzAddrEncoder, XtzAddrPrefixes
 from bip_utils.addr.zil_addr import ZilAddr, ZilAddrDecoder, ZilAddrEncoder
-from bip_utils.addr.ton_addr import TONAddr,TONAddrDecoder, TONAddrEncoder
+from bip_utils.addr.ton_addr import TONAddr, TONAddrDecoder, TONAddrEncoder
